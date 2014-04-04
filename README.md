@@ -6,7 +6,7 @@ An application proxy that can be used to transparently transfer all kind of requ
 Installation
 --------------
 
-The proxy is indentionally limited to a single file. All you have to do is to place `proxy.php` under your application
+The proxy is intentionally limited to a single file. All you have to do is to place `proxy.php` under your application
 
 Whenever you want to make a cross domain request, just make a request to http://www.yourdomain.com/proxy.php and specify the cross domain URL by using `csurl` parameter. Obviously, you can add more parameters according to your needs; note that the rest of the parameters will be used in the cross domain request. For instance, if you are using jQuery:
 
