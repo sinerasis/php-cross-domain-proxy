@@ -123,7 +123,17 @@ curl_setopt($ch, CURLOPT_HEADER, true);	   // enabled response headers
 
 // add data for POST, PUT or DELETE requests
 if('POST' == $request_method) {
-	$post_data = is_array($request_params) ? http_build_query($request_params) : $request_params;
+	if(isset($_FILES) && !empty($_FILES)) {
+		// if we have files, we want to include them also
+		foreach($_FILES as $name=>$details) {
+			// tells curl where our files are
+			$request_params[$name] = '@' . $details['tmp_name'];
+		}
+		// by leaving our params as an array, the request is automatically switched to multipart/form-data later on
+		$post_data = $request_params;
+	} else {
+		$post_data = is_array($request_params) ? http_build_query($request_params) : $request_params;
+	}
 	curl_setopt($ch, CURLOPT_POST, true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS,  $post_data);
 } else if('PUT' == $request_method || 'DELETE' == $request_method) {
