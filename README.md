@@ -45,4 +45,10 @@ $valid_requests = array(
 );
 ```
 
+Fork Modifications
+--------------
+
+1. Cleaned up the code a bit
+2. Include file upload ability
+
  
