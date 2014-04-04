@@ -33,7 +33,7 @@ $valid_requests = array(
 
 /*** END CONFIGURATION/SETTINGS ***/
 
-// output debut messages
+// output debug messages
 function csajax_debug_message($message) {
 	if(CSAJAX_DEBUG) {
 		print $message . PHP_EOL;

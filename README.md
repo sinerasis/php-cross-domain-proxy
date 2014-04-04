@@ -1,7 +1,7 @@
 PHP Cross Domain (AJAX) Proxy
 ==============
 
-An application proxy that can be used to transparently transfer all kind of requests ( including of course XMLHTTPRequest ) to any third part domain. It is possible to define a list of acceptable third party domains and you are encouraged to do so. Otherwise the proxy is open to any kind of requests.
+An application proxy that can be used to transparently transfer all kind of requests ( including of course XMLHTTPRequest ) to any third party domain. It is possible to define a list of acceptable third party domains and you are encouraged to do so. Otherwise the proxy is open to any kind of requests.
 
 Installation
 --------------
